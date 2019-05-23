@@ -1,5 +1,5 @@
 $(function () {
-    
+
 	//Text slider
 	$('#text_slider').cycle({
 		fx : 'fade',
@@ -7,17 +7,17 @@ $(function () {
 		speed: 900,
 		slides: '.slide'
 	});
-    
+
 	//Countdown
 	$("#countdown").countdown({
-            until: someDate, 
+            until: someDate,
             padZeroes: true,
             layout: $("#countdown").html()
 	});
-        
+
 	//Submit Newsletter form to PHP file
 	$("#form_newsletter").submit(function(event) {
-	    
+
 		//stop form from submitting normally
 		event.preventDefault();
 
@@ -37,7 +37,7 @@ $(function () {
 			$("#form_newsletter_result").hide().html(data).fadeIn();
 		});
 	});
-    
+
 	//About us (Open / Close)
 	$(".open_aboutus").click(function() {
 		$("#about_us").removeClass('animated fadeOut').addClass('animated fadeIn').fadeIn();
@@ -46,17 +46,17 @@ $(function () {
 	$(".close_aboutus").click(function() {
 		$("#about_us").removeClass('animated fadeIn').addClass('animated fadeOut').fadeOut();
 	});
-        
-            
-        
-		
+
+
+
+
 });
 
 //Countdown for demo. Always add 18 days
-var someDate = new Date();
-var numberOfDaysToAdd = 18;
-someDate.setDate(someDate.getDate() + numberOfDaysToAdd); 
+//var someDate = new Date();
+//var numberOfDaysToAdd = 18;
+//someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
 
 //Countdown with real date
-//var someDate = new Date("November 13, 2015 23:59:59");
-//someDate.setDate(someDate.getDate()); 
+var someDate = new Date("June 5, 2019 23:59:59");
+someDate.setDate(someDate.getDate());
